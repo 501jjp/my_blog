@@ -1,0 +1,16 @@
+
+.logintop{
+    background-color:#5bbfde;
+    color: white;
+}
+.left{
+    border-radius: 5px 0px 0px 0px;
+}
+.right{
+    border-radius: 0px 5px 0px 0px;
+}
+.change{
+    height:200px;
+    position: absolute;
+    top:200px;
+}

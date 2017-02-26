@@ -1,0 +1,55 @@
+
+.textlisthead{
+    color: #6699cc;
+    font-size: 17px;
+    margin-bottom: 1px; 
+
+}
+.m-inline{
+    width:100%;
+}
+.textlistbody{
+    color: #666666;
+    font-size: 1px
+}
+.textlisttime{
+    color: #cccccc;
+    font-size: 5px;
+}
+.middiv{
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+.textbottom{
+    border-bottom: 1px  solid black;
+    width: 100%;
+}
+.comment_style{
+    height: 20px;
+    border-style:solid; 
+    border-width:0px 0px 1px 0px; 
+    border-color:#eeeeee;
+}
+.comment_big_style{
+    border-style:solid; 
+    border-width:1px 1px 1px 1px; 
+    border-color:#eeeeee;
+    padding:0px 8px 0px 8px;
+}
+.textarea{ 
+    resize:vertical;
+    overflow-y:visible; 
+}
+.pagediv{
+    padding:12px 0px 15px 0px;
+    margin: auto;
+    height:50px;
+ }
+
+ .myactive{
+     margin: 5px;
+ }
+ .mynotactive{
+     color: #999999;
+     margin: 5px;
+ }
