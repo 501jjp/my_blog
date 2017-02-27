@@ -1,4 +1,5 @@
-var host=0?"192.168.0.100":"localhost";
+//var host=0?"192.168.0.100":"localhost";
+var host=0?"119.29.119.182":"localhost";
 var page_numbers=5;
 function loadindex(){                    
    gettexts(1);

@@ -90,7 +90,8 @@ function registereds() {
         var eeeee=1+1;
         if (e && u && p&&check) {
             var request = new XMLHttpRequest;
-            request.open("POST", "http://localhost/phps/yii/bms/api/web/v1/registereds");
+            //request.open("POST", "http://localhost/phps/yii/bms/api/web/v1/registereds");
+            request.open("POST", "http://119.29.119.182/phps/yii/bms/api/web/v1/registereds");
             var data = "username=" + document.getElementById("username").value
                 + "&password=" + document.getElementById("password").value + "&email=" + document.getElementById("email").value;
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

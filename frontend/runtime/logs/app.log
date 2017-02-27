@@ -1,0 +1,132 @@
+2016-12-03 05:41:11 [::1][-][3qggmsecctdij5lnu3acjim4p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "gii".' in E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('gii', Array)
+#1 E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\wamp\wamp\wamp\www\phps\yii\bms\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\wamp\wamp\wamp\www\phps\yii\bms\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-03 05:41:11 [::1][-][3qggmsecctdij5lnu3acjim4p3][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '81e29edae54e22ceabc6a463c36b3d2e86f693a33ef882c49e9ebad107bc13e9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"DhFX-ufNlO3wSZ8os1XTS6QAwtzcj8jb\",2592000]\";}'
+    'advanced-backend' => 'oj7viia85q2vam4lc3nk20gip6'
+    '_csrf-backend' => 'c5dfea73e0f7f486739c390eedabfaf615a1950815bb20609d09580e6711cefaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MK7QGmHYCh-QMAahRd4D118lUX6COqB5\";}'
+    'advanced-frontend' => '3qggmsecctdij5lnu3acjim4p3'
+    '_csrf-frontend' => '6f5b95e219de0f81d52a54f619c2cdef5f38135f4597edf0816f28bed97105f9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CKzQR-6H2iqWGDPVXZW_yF8onra_K7cT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity-backend=81e29edae54e22ceabc6a463c36b3d2e86f693a33ef882c49e9ebad107bc13e9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22DhFX-ufNlO3wSZ8os1XTS6QAwtzcj8jb%22%2C2592000%5D%22%3B%7D; advanced-backend=oj7viia85q2vam4lc3nk20gip6; _csrf-backend=c5dfea73e0f7f486739c390eedabfaf615a1950815bb20609d09580e6711cefaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MK7QGmHYCh-QMAahRd4D118lUX6COqB5%22%3B%7D; advanced-frontend=3qggmsecctdij5lnu3acjim4p3; _csrf-frontend=6f5b95e219de0f81d52a54f619c2cdef5f38135f4597edf0816f28bed97105f9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CKzQR-6H2iqWGDPVXZW_yF8onra_K7cT%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;F:\\git\\Git\\cmd;C:\\Program Files\\Java\\jdk1.8.0_112\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_112\\bin;C:\\Program Files\\nodejs\\;E:\\wamp\\wamp\\wamp\\bin\\php\\php5.5.12;E:\\python;E:\\android\\sdks\\tools;E:\\android\\sdks\\platform-tools;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/wamp/wamp/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/wamp/wamp/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'E:/wamp/wamp/wamp/www/phps/yii/bms/frontend/web/index.php'
+    'REMOTE_PORT' => '45511'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/phps/yii/bms/frontend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/phps/yii/bms/frontend/web/index.php'
+    'PHP_SELF' => '/phps/yii/bms/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1480740071.064
+    'REQUEST_TIME' => 1480740071
+]
+2016-12-03 05:43:24 [::1][-][3qggmsecctdij5lnu3acjim4p3][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "gii".' in E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('gii', Array)
+#1 E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\wamp\wamp\wamp\www\phps\yii\bms\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\web\Application.php:99
+Stack trace:
+#0 E:\wamp\wamp\wamp\www\phps\yii\bms\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\wamp\wamp\wamp\www\phps\yii\bms\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-12-03 05:43:24 [::1][-][3qggmsecctdij5lnu3acjim4p3][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_COOKIE = [
+    '_identity-backend' => '81e29edae54e22ceabc6a463c36b3d2e86f693a33ef882c49e9ebad107bc13e9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"DhFX-ufNlO3wSZ8os1XTS6QAwtzcj8jb\",2592000]\";}'
+    'advanced-backend' => 'oj7viia85q2vam4lc3nk20gip6'
+    '_csrf-backend' => 'c5dfea73e0f7f486739c390eedabfaf615a1950815bb20609d09580e6711cefaa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MK7QGmHYCh-QMAahRd4D118lUX6COqB5\";}'
+    'advanced-frontend' => '3qggmsecctdij5lnu3acjim4p3'
+    '_csrf-frontend' => '6f5b95e219de0f81d52a54f619c2cdef5f38135f4597edf0816f28bed97105f9a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"CKzQR-6H2iqWGDPVXZW_yF8onra_K7cT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => '_identity-backend=81e29edae54e22ceabc6a463c36b3d2e86f693a33ef882c49e9ebad107bc13e9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22DhFX-ufNlO3wSZ8os1XTS6QAwtzcj8jb%22%2C2592000%5D%22%3B%7D; advanced-backend=oj7viia85q2vam4lc3nk20gip6; _csrf-backend=c5dfea73e0f7f486739c390eedabfaf615a1950815bb20609d09580e6711cefaa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MK7QGmHYCh-QMAahRd4D118lUX6COqB5%22%3B%7D; advanced-frontend=3qggmsecctdij5lnu3acjim4p3; _csrf-frontend=6f5b95e219de0f81d52a54f619c2cdef5f38135f4597edf0816f28bed97105f9a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22CKzQR-6H2iqWGDPVXZW_yF8onra_K7cT%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;F:\\git\\Git\\cmd;C:\\Program Files\\Java\\jdk1.8.0_112\\jre\\bin;C:\\Program Files\\Java\\jdk1.8.0_112\\bin;C:\\Program Files\\nodejs\\;E:\\wamp\\wamp\\wamp\\bin\\php\\php5.5.12;E:\\python;E:\\android\\sdks\\tools;E:\\android\\sdks\\platform-tools;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'E:/wamp/wamp/wamp/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/wamp/wamp/wamp/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'E:/wamp/wamp/wamp/www/phps/yii/bms/frontend/web/index.php'
+    'REMOTE_PORT' => '45918'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/phps/yii/bms/frontend/web/index.php?r=gii'
+    'SCRIPT_NAME' => '/phps/yii/bms/frontend/web/index.php'
+    'PHP_SELF' => '/phps/yii/bms/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1480740204.149
+    'REQUEST_TIME' => 1480740204
+]
