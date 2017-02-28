@@ -2,7 +2,7 @@
 .textlisthead{
     color: #6699cc;
     font-size: 17px;
-    margin-bottom: 1px; 
+    margin-bottom: 1px;
 
 }
 .m-inline{
@@ -26,33 +26,65 @@
 }
 .comment_style{
     height: 20px;
-    border-style:solid; 
-    border-width:0px 0px 1px 0px; 
+    border-style:solid;
+    border-width:0px 0px 1px 0px;
     border-color:#eeeeee;
 }
 .comment_big_style{
-    border-style:solid; 
-    border-width:1px 1px 1px 1px; 
+    border-style:solid;
+    border-width:1px 1px 1px 1px;
     border-color:#eeeeee;
     padding:0px 8px 0px 8px;
 }
-.textarea{ 
+.textarea{
     resize:vertical;
-    overflow-y:visible; 
+    overflow-y:visible;
 }
 .pagediv{
     padding:12px 0px 15px 0px;
     margin: auto;
     height:50px;
- }
+}
 
- .myactive{
-     margin: 5px;
- }
- .mynotactive{
-     color: #999999;
-     margin: 5px;
- }
- .footer{
-     background-color: #999999;
- }
+.myactive{
+    margin: 5px;
+}
+.mynotactive{
+    color: #999999;
+    margin: 5px;
+}
+.footer{
+
+}
+.footer_top{
+    border-style:solid;
+    border-width:1px 0px 0px 0px;
+    border-color:#eeeeee;
+    padding: 20px;
+
+}
+.footer-a{
+    font-size: 10px;
+    color: #999999;
+}
+
+.footer-a-first{
+    border-left-width: 1px;
+}
+
+.footer-span{
+
+}
+.footer-header{
+    height: 30px;
+}
+
+.ce{
+    text-align:center;
+}
+.footer-separate{
+    display: inline;
+    margin: 0px 2px 0px 2px;
+    border-width: 0px 1px 0px 0px;
+    border-color: #999999;
+}

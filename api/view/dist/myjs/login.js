@@ -60,7 +60,7 @@ function logins() {
     login.onclick = function () {
         var request = new XMLHttpRequest();
         //request.open("POST", "http://localhost/phps/yii/bms/api/web/v1/logins");
-        request.open("POST", "http://119.29.119.182/phps/yii/bms/api/web/v1/logins");
+        request.open("POST", "http://119.29.119.182/phps/my_blog/api/web/v1/logins");
         var data = "username=" + document.getElementById("username").value
             + "&password=" + document.getElementById("password").value
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

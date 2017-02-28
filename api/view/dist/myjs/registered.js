@@ -91,7 +91,7 @@ function registereds() {
         if (e && u && p&&check) {
             var request = new XMLHttpRequest;
             //request.open("POST", "http://localhost/phps/yii/bms/api/web/v1/registereds");
-            request.open("POST", "http://119.29.119.182/phps/yii/bms/api/web/v1/registereds");
+            request.open("POST", "http://119.29.119.182/phps/my_blog/api/web/v1/registereds");
             var data = "username=" + document.getElementById("username").value
                 + "&password=" + document.getElementById("password").value + "&email=" + document.getElementById("email").value;
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -112,26 +112,26 @@ function registereds() {
 //邮箱检测
 function checkemail(type){
     var reg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        email=document.getElementById("email").value;
-        if (!reg.test(email)&&document.getElementById("email").getAttribute("t")=="0") {
-            addmessage("邮箱格式不正确",type,"demail");
-            document.getElementById("email").setAttribute("t","1");
-            return false
+    email=document.getElementById("email").value;
+    if (!reg.test(email)&&document.getElementById("email").getAttribute("t")=="0") {
+        addmessage("邮箱格式不正确",type,"demail");
+        document.getElementById("email").setAttribute("t","1");
+        return false
+    }
+    else if(reg.test(email)){
+        var demail= document.getElementById("demail");
+        var ch=demail.getElementsByTagName("span");
+        while(ch[0]){
+            demail.removeChild(ch[0]);
+            demail.setAttribute("class", "form-group");
         }
-        else if(reg.test(email)){
-            var demail= document.getElementById("demail");
-            var ch=demail.getElementsByTagName("span");
-            while(ch[0]){
-                    demail.removeChild(ch[0]);
-                    demail.setAttribute("class", "form-group");
-            }
-            document.getElementById("email").value=email;
-            document.getElementById("email").setAttribute("t","0");
-            return true;
-        }
-        else{
-            return;
-        }
+        document.getElementById("email").value=email;
+        document.getElementById("email").setAttribute("t","0");
+        return true;
+    }
+    else{
+        return;
+    }
 }
 
 //登录前邮箱检测
@@ -158,10 +158,10 @@ function checkpassword(){
     if (document.getElementById("password").value != "") {
         var dpassword = document.getElementById("dpassword");
         var ch = dpassword.getElementsByTagName("span");
-            while(ch[0]){
-                    dpassword.removeChild(ch[0]);
-                    dpassword.setAttribute("class", "form-group");
-            }
+        while(ch[0]){
+            dpassword.removeChild(ch[0]);
+            dpassword.setAttribute("class", "form-group");
+        }
         document.getElementById("password").value = password;
         document.getElementById("password").setAttribute("t", "0");
         pp = true;
@@ -175,9 +175,9 @@ function checkpassword(){
         var dreenterpassword = document.getElementById("dreenterpassword");
         var ch = dreenterpassword.getElementsByTagName("span");
         while(ch[0]){
-                    dreenterpassword.removeChild(ch[0]);
-                    dreenterpassword.setAttribute("class", "form-group");
-            }
+            dreenterpassword.removeChild(ch[0]);
+            dreenterpassword.setAttribute("class", "form-group");
+        }
         document.getElementById("password").value = reenterpassword;
         document.getElementById("reenterpassword").setAttribute("t", "0");
         pr=true;

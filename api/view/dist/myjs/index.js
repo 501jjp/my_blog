@@ -1,14 +1,15 @@
 //var host=0?"192.168.0.100":"localhost";
 var host=0?"119.29.119.182":"localhost";
 var page_numbers=5;
-function loadindex(){                    
-   gettexts(1);
-   $("pre").addClass("prettyprint");
+function loadindex(){
+    gettexts(1);
+    $("pre").addClass("prettyprint");
 }
 
 function gettexts(pagenumbers){
-    
-     $.get("http://"+host+"/phps/yii/bms/api/web/v1/texts",{"pagenumber":pagenumbers},function(data){
+
+    // $.get("http://"+host+"/phps/yii/bms/api/web/v1/texts",{"pagenumber":pagenumbers},function(data){
+    $.get("http://"+host+"/phps/my_blog/api/web/v1/texts",{"pagenumber":pagenumbers},function(data){
         if(data["code"]=="200"){
             apendtexts(data["msg"]);
         }
@@ -16,7 +17,7 @@ function gettexts(pagenumbers){
             alert(data["msg"]);
         }
     },'JSON');
-     //return arrs;
+    //return arrs;
 }
 
 function apendtext(text){
@@ -37,16 +38,16 @@ function apendtext(text){
             <div>\
             \
         </div>";
-$("#jjp").append(ss);
-pinglunajs(text["uuid"]+"aa");
-} 
+    $("#jjp").append(ss);
+    pinglunajs(text["uuid"]+"aa");
+}
 
-    
+
 
 function timehandle(time){
-   var date= new Date(time);
-   var str=date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDay()+"日"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
-   return str;
+    var date= new Date(time);
+    var str=date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDay()+"日"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+    return str;
 }
 
 function apendtexts(arrs){
@@ -58,44 +59,44 @@ loadindex();
 
 
 function pinglunajs(idname){
-        $("#"+idname).click(function(){
-            var judge=$("#"+idname).attr("judge");
-            var request_judge=$("#"+idname).attr("request_judge");
-            if(judge=="false"){
-                $("#"+idname).attr("judge","true");
-                var text_uuid=$("#"+idname).attr("text_uuid");
-                if(request_judge=="false"){
-                    getcomments($("#"+text_uuid+"text").attr("nowpage"),text_uuid);
-                    $("#"+idname).attr("request_judge","true");
-                }
-                $("#"+text_uuid).show();
+    $("#"+idname).click(function(){
+        var judge=$("#"+idname).attr("judge");
+        var request_judge=$("#"+idname).attr("request_judge");
+        if(judge=="false"){
+            $("#"+idname).attr("judge","true");
+            var text_uuid=$("#"+idname).attr("text_uuid");
+            if(request_judge=="false"){
+                getcomments($("#"+text_uuid+"text").attr("nowpage"),text_uuid);
+                $("#"+idname).attr("request_judge","true");
             }
-            else if(judge=="true"){
-                var text_uuid=$("#"+idname).attr("text_uuid");
-                $("#"+text_uuid).hide();
-                $("#"+idname).attr("judge","false");
-            }
-    }); 
+            $("#"+text_uuid).show();
+        }
+        else if(judge=="true"){
+            var text_uuid=$("#"+idname).attr("text_uuid");
+            $("#"+text_uuid).hide();
+            $("#"+idname).attr("judge","false");
+        }
+    });
 }
 
 
 function getcomments(pagenumbers,text_uuid){
-    
-     $.get("http://"+host+"/phps/yii/bms/api/web/v1/comments",{"pagenumber":pagenumbers,"text_uuid":text_uuid},function(data){
+    $.get("http://"+host+"/phps/my_blog/api/web/v1/comments",{"pagenumber":pagenumbers,"text_uuid":text_uuid},function(data){
+        //$.get("http://"+host+"/phps/yii/bms/api/web/v1/comments",{"pagenumber":pagenumbers,"text_uuid":text_uuid},function(data){
         if(data["code"]=="200"){
             apendcomments(data["msg"]);
             var page_count=$("#"+text_uuid+"text").attr("comment_count");
             var n_page=$("#"+text_uuid+"text").attr("nowpage");
             var comment_page="";
             /*
-            if(page_count==page_numbers){
-                comment_page="\
-            <div class='pagediv' id='"+text_uuid+"pagediv'>\
-                <a class='myactive' href='#;'>1</a>\
-            </div>\
-            ";
-            }
-            */
+             if(page_count==page_numbers){
+             comment_page="\
+             <div class='pagediv' id='"+text_uuid+"pagediv'>\
+             <a class='myactive' href='#;'>1</a>\
+             </div>\
+             ";
+             }
+             */
             comment_page="\
             <div p='' class='pagediv' uuid="+text_uuid+" id='"+text_uuid+"pagediv' >\
                 <a class='myactive' href='#;'>上页</a>\
@@ -135,13 +136,13 @@ function getcomments(pagenumbers,text_uuid){
                     }
                     if(html=="下页"){
                         if(n_p*1<p_ns){
-                                $("#"+text_id).attr("nowpage",(n_p*1+1)+"");
-                                $(this).parent().prevAll().remove();
-                                pagumbers=n_p*1+1;
-                                $("#"+get_id+"pa_in_text").html(pagumbers);
-                                req=true;
-                                if(n_p*1==(p_ns*1-1)){
-                                }
+                            $("#"+text_id).attr("nowpage",(n_p*1+1)+"");
+                            $(this).parent().prevAll().remove();
+                            pagumbers=n_p*1+1;
+                            $("#"+get_id+"pa_in_text").html(pagumbers);
+                            req=true;
+                            if(n_p*1==(p_ns*1-1)){
+                            }
                         }
                         if(n_p*1>=p_ns){
                             req=false;
@@ -149,7 +150,8 @@ function getcomments(pagenumbers,text_uuid){
                     }
                     console.log(pagumbers);
                     if(req){
-                        $.get("http://"+host+"/phps/yii/bms/api/web/v1/comments",{"pagenumber":pagumbers,"text_uuid":get_id},function(data){
+                        $.get("http://"+host+"/phps/my_blog/api/web/v1/comments",{"pagenumber":pagumbers,"text_uuid":get_id},function(data){
+                            //$.get("http://"+host+"/phps/yii/bms/api/web/v1/comments",{"pagenumber":pagumbers,"text_uuid":get_id},function(data){
                             console.log(data["msg"]);
                             apendcomments(data["msg"]);
 
@@ -209,7 +211,7 @@ function getcomments(pagenumbers,text_uuid){
             $("#"+text_uuid+"bucomment").click(function(){
                 var bu=$("#"+text_uuid+"bucomment");
                 var texar=$("#"+text_uuid+"textareacomment");
-                
+
                 var url="http://"+host+"/phps/yii/bms/api/web/v1/comments";
                 var datass={
                     text_uuid:bu.attr("text_uuid"),
@@ -222,7 +224,7 @@ function getcomments(pagenumbers,text_uuid){
                     console.log(status);
                     if(status=="success"){
                         //待写。。。。。。。。。
-                        
+
                     }
                 })
             })
@@ -231,7 +233,7 @@ function getcomments(pagenumbers,text_uuid){
             alert(data["msg"]);
         }
     },'JSON');
-     //return arrs;
+    //return arrs;
 }
 
 function apendcomments(arrs,obj=""){
@@ -255,7 +257,7 @@ function apendcomment(comment,obj){
                <div class='delate comment_style'></div>\
             ";
     }
-  if(comment["two_username"]==""){
+    if(comment["two_username"]==""){
         ss="<div id="+comment["uuid"]+" class='media'>\
                    <a class='pull-left' href='#;'>\
                        <img class='media-object' src='../userpicture/"+comment["picture_path"]+"'>\
@@ -275,7 +277,7 @@ function apendcomment(comment,obj){
     else{
         obj.parent().before(ss);
     }
-    
+
 
 
     $("#"+comment["uuid"]+"ar").click(function(){
@@ -295,7 +297,7 @@ function apendcomment(comment,obj){
             $("#"+comment["uuid"]+"bu").click(function(){
                 var bu=$("#"+comment["uuid"]+"bu");
                 var texar=$("#"+comment["uuid"]+"textarea");
-                
+
                 var url="http://"+host+"/phps/yii/bms/api/web/v1/comments";
                 var datass={
                     text_uuid:bu.attr("text_uuid"),
